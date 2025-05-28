@@ -16,6 +16,7 @@ analyzer:
   errors:
     unused_local_variable: ignore
     no_leading_underscores_for_local_identifiers: ignore
+    equal_elements_in_set: ignore
 
 # Uncomment the following section to specify additional rules.
 
