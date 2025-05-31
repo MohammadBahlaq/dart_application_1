@@ -1,33 +1,26 @@
 void main() {
-  ///Super class can contain sup classes => num : int double
-  Human obj = Student();
-
-  double x = 5.5;
-
-  obj.printData();
+  MathExam mathExam = MathExam();
+  mathExam.blackWhitePrint();
+  mathExam.colorfullPrint();
 }
 
-interface class MyPrint {
-  void printData() {}
+abstract interface class PrintThings {
+  void blackWhitePrint();
+  void colorfullPrint();
 }
 
-class Human implements MyPrint {
+abstract class Exam {}
+
+class HistoryExam extends Exam {}
+
+class MathExam extends Exam implements PrintThings {
   @override
-  void printData() {
-    print("Human");
+  void blackWhitePrint() {
+    print("Black White Print Math Exam");
   }
-}
 
-class Student extends Human implements MyPrint {
   @override
-  void printData() {
-    print("Student");
-  }
-}
-
-class Employee extends Human implements MyPrint {
-  @override
-  void printData() {
-    print("Employee");
+  void colorfullPrint() {
+    print("Colorfull Print Math Exam");
   }
 }
