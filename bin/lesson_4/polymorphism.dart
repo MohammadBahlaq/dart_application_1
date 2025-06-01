@@ -1,5 +1,4 @@
 void main() {
-  ///Super class can contain sup classes => num : int double
   Human human1 = Student();
   Human human2 = Employee();
 
@@ -8,9 +7,7 @@ void main() {
 }
 
 abstract class Human {
-  void printData() {
-    print("Human");
-  }
+  void printData();
 }
 
 class Student extends Human {
